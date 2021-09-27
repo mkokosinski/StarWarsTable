@@ -1,5 +1,4 @@
-@import url('./switzer.css');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap'); */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -15,7 +14,10 @@ main {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
 }
 
 a {
@@ -120,9 +122,14 @@ fieldset {
 }
 
 *{
-  font-family: 'Switzer', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 *:disabled{
   cursor: not-allowed;
+}
+
+svg{
+  fill: currentColor;
+  stroke: currentColor;
 }
