@@ -1,0 +1,82 @@
+@use 'styles/shared' as *;
+
+.button {
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  transition: 150ms;
+  
+  &--small{
+    font-size: 14px;
+    gap: .75rem;
+    padding: .75rem 1rem;
+  }
+  &--medium{
+    font-size: 16px;
+    gap: .875rem;
+    padding: .875rem 1.5rem;
+  }
+  &--big{
+    font-size: 18px;
+    gap: .875rem;
+    padding: .875rem 1.65rem;
+  }
+
+  &--primary-blue {
+    background-color: $blue-100;
+    color: $white-100;
+
+    &:not(:disabled){
+      &:hover, &:focus{
+        background-color: $blue-saturated-100;
+      }
+  
+     &:active{
+        background-color: $navy-blue-100;
+      }
+    }
+
+    &:disabled{
+      opacity: .5;
+    }
+  }
+  &--secondary-red {
+    background-color: $dark-red-90;
+    color: $white-100;
+
+    &:not(:disabled){
+      &:hover, &:focus{
+        background-color:  $red-100;
+      }
+  
+     &:active{
+        background-color: $dark-red-100;
+      }
+    }
+    &:disabled{
+      opacity: .5;
+    }
+  }
+
+  &--ghost-gray {
+    background-color: $white-100;
+    border: 1px solid $blue-pale-40; 
+    box-shadow: 0 2px 4px $blue-pale-20; 
+    color: $anthracite-100;
+
+    &:not(:disabled){
+      &:hover, &:focus{
+        background-color:  $blue-pale-10; 
+      }
+  
+     &:active{
+        background-color: $blue-pale-20; 
+      }
+    }
+    &:disabled{
+      opacity: .5;
+    }
+  }
+}
