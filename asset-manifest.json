@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/starWars/static/css/main.8ffd6379.chunk.css",
-    "main.js": "/starWars/static/js/main.c1a668b2.chunk.js",
-    "main.js.map": "/starWars/static/js/main.c1a668b2.chunk.js.map",
-    "runtime-main.js": "/starWars/static/js/runtime-main.d9cb1eb1.js",
-    "runtime-main.js.map": "/starWars/static/js/runtime-main.d9cb1eb1.js.map",
-    "static/js/2.4c59ef50.chunk.js": "/starWars/static/js/2.4c59ef50.chunk.js",
-    "static/js/2.4c59ef50.chunk.js.map": "/starWars/static/js/2.4c59ef50.chunk.js.map",
-    "index.html": "/starWars/index.html",
-    "static/css/main.8ffd6379.chunk.css.map": "/starWars/static/css/main.8ffd6379.chunk.css.map",
-    "static/js/2.4c59ef50.chunk.js.LICENSE.txt": "/starWars/static/js/2.4c59ef50.chunk.js.LICENSE.txt",
-    "static/media/app.scss": "/starWars/static/media/Oswald-SemiBold.031050ad.ttf",
-    "static/media/arrow.1c979903.svg": "/starWars/static/media/arrow.1c979903.svg",
-    "static/media/arrow_thin.f2f8b339.svg": "/starWars/static/media/arrow_thin.f2f8b339.svg",
-    "static/media/check.fdb1d39c.svg": "/starWars/static/media/check.fdb1d39c.svg",
-    "static/media/edit.5d515e89.svg": "/starWars/static/media/edit.5d515e89.svg",
-    "static/media/menu-dot.97ca040f.svg": "/starWars/static/media/menu-dot.97ca040f.svg",
-    "static/media/minus.1a945629.svg": "/starWars/static/media/minus.1a945629.svg",
-    "static/media/search.a8dcae46.svg": "/starWars/static/media/search.a8dcae46.svg"
+    "main.css": "/StarWarsTable/static/css/main.fc9e37c5.chunk.css",
+    "main.js": "/StarWarsTable/static/js/main.c1a668b2.chunk.js",
+    "main.js.map": "/StarWarsTable/static/js/main.c1a668b2.chunk.js.map",
+    "runtime-main.js": "/StarWarsTable/static/js/runtime-main.65a82de5.js",
+    "runtime-main.js.map": "/StarWarsTable/static/js/runtime-main.65a82de5.js.map",
+    "static/js/2.4c59ef50.chunk.js": "/StarWarsTable/static/js/2.4c59ef50.chunk.js",
+    "static/js/2.4c59ef50.chunk.js.map": "/StarWarsTable/static/js/2.4c59ef50.chunk.js.map",
+    "index.html": "/StarWarsTable/index.html",
+    "static/css/main.fc9e37c5.chunk.css.map": "/StarWarsTable/static/css/main.fc9e37c5.chunk.css.map",
+    "static/js/2.4c59ef50.chunk.js.LICENSE.txt": "/StarWarsTable/static/js/2.4c59ef50.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/StarWarsTable/static/media/Oswald-SemiBold.031050ad.ttf",
+    "static/media/arrow.1c979903.svg": "/StarWarsTable/static/media/arrow.1c979903.svg",
+    "static/media/arrow_thin.f2f8b339.svg": "/StarWarsTable/static/media/arrow_thin.f2f8b339.svg",
+    "static/media/check.fdb1d39c.svg": "/StarWarsTable/static/media/check.fdb1d39c.svg",
+    "static/media/edit.5d515e89.svg": "/StarWarsTable/static/media/edit.5d515e89.svg",
+    "static/media/menu-dot.97ca040f.svg": "/StarWarsTable/static/media/menu-dot.97ca040f.svg",
+    "static/media/minus.1a945629.svg": "/StarWarsTable/static/media/minus.1a945629.svg",
+    "static/media/search.a8dcae46.svg": "/StarWarsTable/static/media/search.a8dcae46.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d9cb1eb1.js",
+    "static/js/runtime-main.65a82de5.js",
     "static/js/2.4c59ef50.chunk.js",
-    "static/css/main.8ffd6379.chunk.css",
+    "static/css/main.fc9e37c5.chunk.css",
     "static/js/main.c1a668b2.chunk.js"
   ]
 }
