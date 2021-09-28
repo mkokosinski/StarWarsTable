@@ -4,12 +4,17 @@ import cs from 'classnames'
 import { BUTTON_SIZE, BUTTON_VARIANT } from './ButtonConstants'
 import '../buttons.scss'
 
-const Button = ({ children, size, variant, onClick }) => {
+const Button = ({ className, children, size, variant, onClick, ...props }) => {
   const buttonClass = cs('button', {
     [`button--${variant}`]: variant,
     [`button--${size}`]: size,
+    [className]: className,
   })
-  return <button className={buttonClass}>{children}</button>
+  return (
+    <button onClick={onClick} className={buttonClass} {...props}>
+      {children}
+    </button>
+  )
 }
 
 Button.defaultProps = {
@@ -18,6 +23,7 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   size: PropTypes.oneOf(Object.values(BUTTON_SIZE)),
   variant: PropTypes.oneOf(Object.values(BUTTON_VARIANT)),
