@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { endponits } from 'api/api'
 import { getAllPages } from 'api/apiHelpers'
+import { REQUEST_STATUS } from 'api/constants'
 
 const DataContext = createContext()
 
@@ -31,7 +32,8 @@ export const useStarWarsData = () => useContext(DataContext)
 
 const DataProvider = ({ children }) => {
   const [data, setData] = useState(initialState)
-  const [status, setStatus] = useState('idle')
+  const [status, setStatus] = useState(REQUEST_STATUS.IDLE)
+  const [error, setError] = useState(null)
 
   const editHero = (editedHero) => {
     setData((prev) => ({
@@ -59,15 +61,21 @@ const DataProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    setStatus('loading')
-    getData().then((res) => {
-      setData(res)
-      setStatus('done')
-    })
+    setStatus(REQUEST_STATUS.LOADING)
+    getData()
+      .then((res) => {
+        setData(res)
+        setStatus(REQUEST_STATUS.FULFILLED)
+      })
+      .catch((err) => {
+        console.error({ err })
+        setStatus(REQUEST_STATUS.ERROR)
+        setError(err.message)
+      })
   }, [])
 
   return (
-    <DataContext.Provider value={{ data, editHero, deactivePeoples, removePeoples, status }}>
+    <DataContext.Provider value={{ data, error, editHero, deactivePeoples, removePeoples, status }}>
       {children}
     </DataContext.Provider>
   )
