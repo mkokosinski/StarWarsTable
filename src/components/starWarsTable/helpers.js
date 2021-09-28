@@ -1,8 +1,3 @@
-import { PEOPLE_STATUS } from 'context/dataContext'
-import ActionsCell from './actions/ActionsCell'
-import NameCell from './name/NameCell'
-import StatusInfo from './status/StatusInfo'
-
 const filterData = (data, filters) => {
   const { searchQuery, selectedHomeworlds, selectedSpecies, selectedStatus } = filters
   return {
@@ -54,71 +49,36 @@ const composeRowData = (data) =>
 
 export const getTableData = (data, filters) => {
   const filteredData = filterData(data, filters)
-
   const tableData = composeRowData(filteredData)
-
-  const headers = [
-    {
-      label: 'Name',
-      key: 'name',
-      sortable: true,
-    },
-    {
-      label: 'Born',
-      key: 'born',
-      sortable: true,
-    },
-    {
-      label: 'Homeworld',
-      key: 'homeworld',
-      sortable: true,
-    },
-    {
-      label: 'Vehicles and Starships',
-      sortable: false,
-    },
-    {
-      label: 'Status',
-      sortable: false,
-    },
-    {
-      label: 'Actions',
-      sortable: false,
-    },
-  ]
-
-  const rows = tableData.map((hero) => ({
-    meta: { id: hero.url, disabled: hero.status === PEOPLE_STATUS.DEACTIVATED },
-    cols: [
-      {
-        key: 'name',
-        title: `${hero.name} ${hero.species.join(', ')}`,
-        content: <NameCell key={hero.url} name={hero.name} species={hero.species} />,
-      },
-      {
-        key: 'born',
-        title: hero.born,
-        content: hero.born,
-      },
-      {
-        key: 'homeworld',
-        title: hero.homeworld,
-        content: hero.homeworld,
-      },
-      {
-        title: hero.vehiclesAndStarships.slice(0, 2).join(', '),
-        content: hero.vehiclesAndStarships.slice(0, 2).join(', '),
-      },
-      {
-        title: hero.status,
-        content: <StatusInfo key={hero.url} status={hero.status} />,
-      },
-      {
-        title: 'action',
-        content: <ActionsCell key={hero.url} />,
-      },
-    ],
-  }))
-
-  return { rows, headers }
+  return tableData
 }
+
+export const headers = [
+  {
+    label: 'Name',
+    key: 'name',
+    sortable: true,
+  },
+  {
+    label: 'Born',
+    key: 'born',
+    sortable: true,
+  },
+  {
+    label: 'Homeworld',
+    key: 'homeworld',
+    sortable: true,
+  },
+  {
+    label: 'Vehicles and Starships',
+    sortable: false,
+  },
+  {
+    label: 'Status',
+    sortable: false,
+  },
+  {
+    label: 'Actions',
+    sortable: false,
+  },
+]

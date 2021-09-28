@@ -1,0 +1,25 @@
+@use 'styles/shared' as *;
+
+.modal {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  z-index: 100;
+
+  &__overlay {
+    background-color: $anthracite-80;
+    inset: 0;
+    position: absolute;
+    opacity: 0.5;
+  }
+
+  &__body {
+    background-color: $white-100;
+    border-radius: 5px;
+    padding: 40px;
+    position: relative;
+  }
+}

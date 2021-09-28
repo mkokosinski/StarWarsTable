@@ -33,6 +33,15 @@ const DataProvider = ({ children }) => {
   const [data, setData] = useState(initialState)
   const [status, setStatus] = useState('idle')
 
+  const editHero = (editedHero) => {
+    setData((prev) => ({
+      ...prev,
+      people: prev.people.map((hero) =>
+        hero.url === editedHero.url ? { ...hero, ...editedHero } : hero,
+      ),
+    }))
+  }
+
   const removePeoples = (peopleIds) => {
     setData((prev) => ({
       ...prev,
@@ -58,7 +67,7 @@ const DataProvider = ({ children }) => {
   }, [])
 
   return (
-    <DataContext.Provider value={{ data, deactivePeoples, removePeoples, status }}>
+    <DataContext.Provider value={{ data, editHero, deactivePeoples, removePeoples, status }}>
       {children}
     </DataContext.Provider>
   )
