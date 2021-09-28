@@ -1,0 +1,22 @@
+@use 'styles/shared' as *;
+
+.status-info {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+
+  &__label {
+    text-transform: capitalize;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    background-color: $blue-pale-60;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 14px;
+    padding: 2px;
+    width: 14px;
+  }
+}

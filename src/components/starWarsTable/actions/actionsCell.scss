@@ -1,0 +1,16 @@
+@use 'styles/shared' as *;
+
+.actionsCell {
+  display: flex;
+  gap: 1rem;
+
+  &__button {
+    color: $anthracite-50;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+      color: $anthracite-100;
+    }
+  }
+}

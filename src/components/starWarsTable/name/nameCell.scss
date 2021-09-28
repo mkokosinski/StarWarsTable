@@ -1,0 +1,13 @@
+@use 'styles/shared' as *;
+
+.nameCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  &__name {
+    font-weight: $font-medium;
+  }
+  &__species {
+    color: $anthracite-70;
+  }
+}
