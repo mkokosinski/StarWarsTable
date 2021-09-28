@@ -1,0 +1,8 @@
+@use 'styles/shared' as *;
+
+.searchInput {
+  svg {
+    color: $blue-100;
+    stroke: none;
+  }
+}
