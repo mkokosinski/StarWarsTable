@@ -22,38 +22,44 @@ const StarWarsTable = () => {
   )
 
   const tableData = useMemo(() => getTableData(data, filters), [data, filters])
-  const rows = tableData.map((hero) => ({
-    meta: { id: hero.url, disabled: hero.status === PEOPLE_STATUS.DEACTIVATED },
-    cols: [
-      {
-        key: 'name',
-        title: `${hero.name} ${hero.species.join(', ')}`,
-        content: <NameCell key={hero.url} name={hero.name} species={hero.species} />,
-      },
-      {
-        key: 'born',
-        title: hero.born,
-        content: hero.born,
-      },
-      {
-        key: 'homeworld',
-        title: hero.homeworld,
-        content: hero.homeworld,
-      },
-      {
-        title: hero.vehiclesAndStarships.slice(0, 2).join(', '),
-        content: hero.vehiclesAndStarships.slice(0, 2).join(', '),
-      },
-      {
-        title: hero.status,
-        content: <StatusInfo key={hero.url} status={hero.status} />,
-      },
-      {
-        title: 'action',
-        content: <ActionsCell handleEdit={() => showModal(MODAL_TYPE.EDIT, hero)} key={hero.url} />,
-      },
-    ],
-  }))
+  const rows = useMemo(
+    () =>
+      tableData.map((hero) => ({
+        meta: { id: hero.url, disabled: hero.status === PEOPLE_STATUS.DEACTIVATED },
+        cols: [
+          {
+            key: 'name',
+            title: `${hero.name} ${hero.species.join(', ')}`,
+            content: <NameCell key={hero.url} name={hero.name} species={hero.species} />,
+          },
+          {
+            key: 'born',
+            title: hero.born,
+            content: hero.born,
+          },
+          {
+            key: 'homeworld',
+            title: hero.homeworld,
+            content: hero.homeworld,
+          },
+          {
+            title: hero.vehiclesAndStarships.slice(0, 2).join(', '),
+            content: hero.vehiclesAndStarships.slice(0, 2).join(', '),
+          },
+          {
+            title: hero.status,
+            content: <StatusInfo key={hero.url} status={hero.status} />,
+          },
+          {
+            title: 'action',
+            content: (
+              <ActionsCell handleEdit={() => showModal(MODAL_TYPE.EDIT, hero)} key={hero.url} />
+            ),
+          },
+        ],
+      })),
+    [showModal, tableData],
+  )
   return (
     <>
       <EditModal />

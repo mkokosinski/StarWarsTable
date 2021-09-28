@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useCallback, useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const UiContext = createContext()
@@ -15,13 +15,13 @@ const UiContextProvider = ({ children }) => {
   const [selectedItems, setSelectedItems] = useState([])
   const [modal, setModal] = useState(initModalState)
 
-  const showModal = (type, state) => {
+  const showModal = useCallback((type, state) => {
     setModal({ type, state })
-  }
+  }, [])
 
-  const hideModal = () => {
+  const hideModal = useCallback(() => {
     setModal(initModalState)
-  }
+  }, [])
 
   return (
     <UiContext.Provider
