@@ -2,10 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cs from 'classnames'
 
-import { ReactComponent as Arrow } from 'assets/icons/arrow.svg'
-
-import './sortableHeaderCell.scss'
 import { tableHeaderType } from '../tableTypes'
+import { ReactComponent as Arrow } from 'assets/icons/arrow.svg'
+import './sortableHeaderCell.scss'
 
 const SortableHeaderCell = ({ header, sortState, handleSort }) => {
   const isActiveSortColumn = sortState.key === header.key

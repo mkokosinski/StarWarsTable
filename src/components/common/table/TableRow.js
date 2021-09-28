@@ -1,7 +1,7 @@
-import React from 'react'
-import { tableRowType } from './tableTypes'
+import { useEffect } from 'react'
+
 import { useUiContext } from 'context/uiContext'
-import { useEffect } from 'react/cjs/react.development'
+import { tableRowType } from './tableTypes'
 
 const TableRow = ({ row }) => {
   const { selectedItems, setSelectedItems } = useUiContext()

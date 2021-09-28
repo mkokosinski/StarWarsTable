@@ -1,15 +1,15 @@
 import { useMemo } from 'react'
 
+import ActionsCell from './actions/ActionsCell'
+import EditModal from './editModal/EditModal'
+import NameCell from './name/NameCell'
+import StatusInfo from './status/StatusInfo'
 import Table from 'components/common/table/Table'
 
-import { PEOPLE_STATUS, useStarWarsData } from 'context/dataContext'
 import { useUiContext } from 'context/uiContext'
-import { getTableData, headers } from './helpers'
-import EditModal from './editModal/EditModal'
-import ActionsCell from './actions/ActionsCell'
-import StatusInfo from './status/StatusInfo'
-import NameCell from './name/NameCell'
+import { PEOPLE_STATUS, useStarWarsData } from 'context/dataContext'
 import { MODAL_TYPE } from 'components/modal/constants'
+import { getTableData, headers } from './helpers'
 
 const StarWarsTable = () => {
   const { data } = useStarWarsData()

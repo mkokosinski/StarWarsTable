@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import { ReactComponent as Active } from 'assets/icons/check.svg'
 import { ReactComponent as Deactivated } from 'assets/icons/minus.svg'
 
-import './statusInfo.scss'
 import { PEOPLE_STATUS } from 'context/dataContext'
+import './statusInfo.scss'
 
 const icons = {
   [PEOPLE_STATUS.ACTIVE]: <Active />,

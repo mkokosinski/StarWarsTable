@@ -1,10 +1,11 @@
 import { useCallback } from 'react'
-// import PropTypes from 'prop-types'
+
 import Select from 'components/common/inputs/select/Select'
+
 import { useStarWarsData } from 'context/dataContext'
 import { useUiContext } from 'context/uiContext'
 
-const SpeciesSelect = (props) => {
+const SpeciesSelect = () => {
   const {
     data: { species },
   } = useStarWarsData()
@@ -24,7 +25,5 @@ const SpeciesSelect = (props) => {
     </div>
   )
 }
-
-SpeciesSelect.propTypes = {}
 
 export default SpeciesSelect

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import SortableHeaderCell from './sortableHeaderCell/SortableHeaderCell'
+
 import { useUiContext } from 'context/uiContext'
 import { tableHeaderType } from './tableTypes'
 
