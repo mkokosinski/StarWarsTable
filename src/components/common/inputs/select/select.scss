@@ -1,0 +1,62 @@
+@use 'styles/shared' as *;
+
+.select {
+  cursor: pointer;
+  position: relative;
+
+  input {
+    cursor: pointer;
+  }
+
+  &--is-active {
+    .select__icon {
+      transform: rotate(180deg);
+    }
+
+    .select__options {
+      display: block;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__options {
+    background-color: $white-100;
+    border: 1px solid $blue-pale-40;
+    border-radius: 5px;
+    color: $anthracite-80;
+    display: none;
+    font-size: 15px;
+    margin-top: 4px;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__option {
+    cursor: pointer;
+    padding: 0.875rem 0.75rem;
+    transition: background-color 150ms;
+
+    &:hover {
+      background-color: $blue-pale-5;
+    }
+
+    &--selected {
+      color: $white-100;
+      background-color: $blue-saturated-100;
+      &:hover {
+        background-color: $blue-saturated-100;
+      }
+    }
+  }
+
+  &__no-results {
+    padding: 0.875rem 0.75rem;
+  }
+}
