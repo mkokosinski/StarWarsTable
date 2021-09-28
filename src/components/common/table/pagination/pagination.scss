@@ -1,0 +1,29 @@
+@use 'styles/shared' as *;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: $font-medium;
+  gap: 0.25rem;
+  justify-content: flex-end;
+
+  &__arrow {
+    &--left {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__separator {
+    align-items: flex-end;
+    display: flex;
+    margin: 0 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  &__button {
+    &--active {
+      background-color: $blue-pale-15;
+    }
+  }
+}
